@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to your Dashboard!</h2>
+        <p>This is where users can upload their folios.</p>
+        <h3>Upload Folio</h3>
+        <form id="folioUploadForm">
+            <div class="form-group">
+                <label for="folioType">Folio Type</label>
+                <select id="folioType" required>
+                    <option value="Inscripcion">Inscripción</option>
+                    <option value="Cuatrimestre">Cuatrimestre</option>
+                    <option value="Seguro escolar">Seguro Escolar</option>
+                    <option value="Seguro por estadia">Seguro por Estadía</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="folioPdf">Upload PDF</label>
+                <input type="file" id="folioPdf" accept=".pdf" required>
+            </div>
+            <button type="submit">Upload</button>
+            <p id="uploadMessage"></p>
+        </form>
+
+        <h3>My Folios</h3>
+        <ul id="folioList"></ul>
+        <button id="logoutButton">Logout</button>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

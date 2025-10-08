@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="form-card">
+            <div class="form-toggle">
+                <button id="toggleLogin" class="active">Login</button>
+                <button id="toggleRegister">Register</button>
+            </div>
+            <div class="form-content">
+                <form id="loginForm" class="active">
+                    <h3>Login</h3>
+                    <div class="form-group">
+                        <label for="loginUsername"><i class="fas fa-user"></i> Username</label>
+                        <input type="text" id="loginUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    <p id="loginMessage" class="message"></p>
+                    <p class="form-links">
+                        <a href="#" id="showForgot"><i class="fas fa-question-circle"></i> Forgot Password?</a>
+                    </p>
+                </form>
+        
+                <form id="registerForm" class="hidden">
+                    <h3>Register</h3>
+                    <div class="form-group">
+                        <label for="registerUsername"><i class="fas fa-user-plus"></i> Username</label>
+                        <input type="text" id="registerUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerRole"><i class="fas fa-user-tag"></i> Role</label>
+                        <select id="registerRole" required>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <button type="submit"><i class="fas fa-user-plus"></i> Register</button>
+                    <p id="registerMessage" class="message"></p>
+                    <p class="form-links"><a href="#" id="showLoginFromRegister"><i class="fas fa-arrow-circle-left"></i> Back to Login</a></p>
+                </form>
+        
+                <form id="forgotPasswordForm" class="hidden">
+                    <h3>Forgot Password</h3>
+                    <div class="form-group">
+                        <label for="forgotUsername"><i class="fas fa-user-secret"></i> Username</label>
+                        <input type="text" id="forgotUsername" required>
+                    </div>
+                    <button type="submit"><i class="fas fa-sync-alt"></i> Reset Password</button>
+                    <p id="forgotMessage" class="message"></p>
+                    <p class="form-links"><a href="#" id="showLoginFromForgot"><i class="fas fa-arrow-circle-left"></i> Back to Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
